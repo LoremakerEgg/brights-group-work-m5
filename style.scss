@@ -8,7 +8,7 @@ body {
   color: #fff;
   width: 450px;
   text-align: center;
-  background-image: url(bilder/STor-Space.jpg);
+  background-image: url(bilder/stars.gif);
   background-size: 150%;
   h1 {
     font-size: 120px;
@@ -26,7 +26,12 @@ body {
     #crew,
     #details {
       font-size: 50px;
+      max-width: 450px;
     }
+  }
+  #button-container {
+    gap: 20px;
+    margin-bottom: 90px;
   }
   #prev,
   #next {
@@ -44,7 +49,7 @@ body {
   }
   form {
     #search {
-      height: 50px;
+      height: 80px;
       width: 200px;
       border-radius: 30px;
     }

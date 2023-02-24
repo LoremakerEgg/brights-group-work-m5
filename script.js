@@ -8,6 +8,8 @@ const launchCrew = document.getElementById("crew");
 const launchDetails = document.getElementById("details");
 const launchNext = document.getElementById("next");
 const launchPrev = document.getElementById("prev");
+const searchBar = document.querySelector("form");
+const submitBtn = document.getElementById("search");
 
 function getLaunches() {
   return fetch(apiUrl)
@@ -55,6 +57,19 @@ function displayLaunches(launches) {
     } else {
       launchDetails.innerText = `Launch Details: ${launches[nameNumber]["details"]}`;
     }
+  });
+  searchBar.addEventListener("submit", (event) => {
+    event.preventDefault();
+    nameNumber = submitBtn.value;
+    launchName.innerText = ` ${launches[nameNumber]["name"]}`;
+    launchImg.innerHTML = `<img src="${launches[nameNumber]["links"].patch["small"]}"></img>`;
+    launchDate.innerText = `Launch Date: ${launches[nameNumber]["date_local"]}`;
+    if (launches[nameNumber]["details"] === null) {
+      launchDetails.innerText = "No launch details detected!";
+    } else {
+      launchDetails.innerText = `Launch Details: ${launches[nameNumber]["details"]}`;
+    }
+    // console.log(nameNumber);
   });
 }
 

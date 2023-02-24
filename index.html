@@ -16,14 +16,16 @@
       <li id="details"></li>
     </ul>
     <div>
-      <button id="prev">Previous</button><button id="next">Next</button>
+      <div id="button-container">
+        <button id="prev">Previous</button><button id="next">Next</button>
+      </div>
       <form>
-        <input type="text" name="search" id="search" /><button
-          type="submit"
-          id="submit"
-        >
-          Search launch
-        </button>
+        <input
+          type="number"
+          name="search"
+          id="search"
+          placeholder="Enter a number between 0 & 204"
+        /><button type="submit" id="submit">Search launch</button>
       </form>
     </div>
     <script src="script.js"></script>
