@@ -1,12 +1,62 @@
+$standardMargin: 20px;
+
 body {
   font-family: "D-DIN", sans-serif;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   background-color: #000;
   color: #fff;
+  width: 450px;
+  text-align: center;
+  background-image: url(bilder/STor-Space.jpg);
+  background-size: 150%;
+  h1 {
+    font-size: 120px;
+  }
   ul {
+    padding: 0;
     li {
       list-style: none;
+      margin: $standardMargin;
+    }
+    #launch-name {
+      font-size: 80px;
+    }
+    #date,
+    #crew,
+    #details {
+      font-size: 50px;
+    }
+  }
+  #prev,
+  #next {
+    width: 200px;
+    height: 150px;
+    font-size: 30px;
+    border-radius: 40px;
+    background-color: #2b1b489c;
+    color: white;
+    border-style: none;
+    border: 2px solid #908b8b;
+  }
+  div {
+    margin-top: 300px;
+  }
+  form {
+    #search {
+      height: 50px;
+      width: 200px;
+      border-radius: 30px;
+    }
+    #submit {
+      height: 100px;
+      width: 150px;
+      border-radius: 30px;
+      font-size: 20px;
+      background-color: #2b1b489c;
+      color: white;
+      border-style: none;
+      border: 2px solid #908b8b;
     }
   }
 }

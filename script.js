@@ -30,13 +30,13 @@ function displayLaunches(launches) {
   // });
   console.log(launches[4]);
   let nameNumber = 0;
-  launchName.innerText = `Launch Name: ${launches[nameNumber]["name"]}`;
+  launchName.innerText = ` ${launches[nameNumber]["name"]}`;
   launchImg.innerHTML = `<img src="${launches[nameNumber]["links"].patch["small"]}"></img>`;
   launchDate.innerText = `Launch Date: ${launches[nameNumber]["date_local"]}`;
   launchDetails.innerText = `Launch Details: ${launches[nameNumber]["details"]}`;
   launchNext.addEventListener("click", () => {
     nameNumber++;
-    launchName.innerText = `Launch Name: ${launches[nameNumber]["name"]}`;
+    launchName.innerText = ` ${launches[nameNumber]["name"]}`;
     launchImg.innerHTML = `<img src="${launches[nameNumber]["links"].patch["small"]}"></img>`;
     launchDate.innerText = `Launch Date: ${launches[nameNumber]["date_local"]}`;
     if (launches[nameNumber]["details"] === null) {
@@ -47,7 +47,7 @@ function displayLaunches(launches) {
   });
   launchPrev.addEventListener("click", () => {
     nameNumber--;
-    launchName.innerText = `Launch Name: ${launches[nameNumber]["name"]}`;
+    launchName.innerText = ` ${launches[nameNumber]["name"]}`;
     launchImg.innerHTML = `<img src="${launches[nameNumber]["links"].patch["small"]}"></img>`;
     launchDate.innerText = `Launch Date: ${launches[nameNumber]["date_local"]}`;
     if (launches[nameNumber]["details"] === null) {
